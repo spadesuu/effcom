@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mind Matters: Mental Health Awareness Blog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:wght@500;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f8f2;--surface:#fff;--ink:#243329;--muted:#4f6355;--teal:#357a55;--teal-soft:#d9eedd;--lav:#e4efd3;--lav-ink:#4a6b2f;--sky:#d7ece8;--sun:#f6f0cf;--line:#cbdccf;
+--h:'Bricolage Grotesque','Trebuchet MS',sans-serif;--s:'Dancing Script','Brush Script MT',cursive;--b:'Atkinson Hyperlegible',Verdana,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#19231d;--surface:#233229;--ink:#eaf3ec;--muted:#b5cbba;--teal:#8fd1a4;--teal-soft:#2f4a38;--lav:#34422a;--lav-ink:#d3e8b8;--sky:#28443f;--sun:#444022;--line:#3f5645}}
+:root[data-theme="dark"]{--bg:#19231d;--surface:#233229;--ink:#eaf3ec;--muted:#b5cbba;--teal:#8fd1a4;--teal-soft:#2f4a38;--lav:#34422a;--lav-ink:#d3e8b8;--sky:#28443f;--sun:#444022;--line:#3f5645}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.7 var(--b)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--surface);z-index:10}
+h1,h2,h3{font-family:var(--h);line-height:1.15;margin:0 0 .5em}
+h1{font:700 clamp(3rem,10vw,5.2rem)/1.05 var(--h)}h2{font-size:clamp(1.6rem,4.5vw,2.4rem)}h3{font-size:1.25rem}
+p{margin:0 0 1em;max-width:68ch}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--surface);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 16px;padding-top:8px;padding-bottom:8px}
+.brand{font:700 clamp(2.2rem,6vw,3rem)/1.1 var(--s);letter-spacing:.12em;margin-right:12px;color:var(--ink);text-decoration:none}
+nav{display:flex;flex-wrap:wrap;gap:4px}
+nav a{color:var(--ink);text-decoration:none;padding:8px 14px;border-radius:99px;font-size:.95rem}
+nav a:hover{background:var(--teal-soft)}
+nav a.go{background:var(--teal);color:var(--surface);font-weight:700}
+section{padding:64px 0}
+.hero{background:linear-gradient(160deg,var(--teal-soft),var(--sky));padding:56px 0 72px}
+.hero .wrap{display:grid;gap:32px;grid-template-columns:1.1fr .9fr;align-items:center}
+.slogan{font:500 1.35rem var(--h);color:var(--lav-ink);margin-bottom:.8em}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.btn{display:inline-block;padding:13px 24px;border-radius:12px;background:var(--teal);color:var(--surface);font-weight:700;text-decoration:none}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--teal)}
+.pic{position:relative;margin:0;aspect-ratio:4/3;border-radius:18px;overflow:hidden;background:var(--teal-soft)}
+.pic.tall{aspect-ratio:4/5}
+.pic img{display:block;width:100%;height:100%;object-fit:cover}
+.pic .ph{display:none;position:absolute;inset:0;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center;padding:16px;border:2px dashed var(--teal);border-radius:18px;color:var(--muted);font-size:.95rem}
+.pic .ph b{color:var(--ink)}
+.pic.missing img{display:none}.pic.missing .ph{display:flex}
+.band{background:var(--surface);border-block:1px solid var(--line)}
+.two{display:grid;gap:32px;grid-template-columns:1fr 1fr;align-items:center}
+.cards{display:grid;gap:18px;grid-template-columns:repeat(3,1fr);margin-top:24px}
+.card{padding:22px;border-radius:16px}
+.card.a{background:var(--lav)}.card.b{background:var(--sky)}.card.c{background:var(--sun)}
+.stat{font:700 2.6rem var(--h);color:var(--teal);line-height:1}
+.article{display:grid;gap:40px}
+.part{display:grid;gap:28px;grid-template-columns:1fr 1fr;align-items:center}
+.part:nth-child(even) .pic{order:-1}
+blockquote{margin:28px 0;padding:20px 24px;border-left:6px solid var(--teal);background:var(--lav);border-radius:0 14px 14px 0;font:500 1.3rem/1.4 var(--h)}
+.cta{background:linear-gradient(160deg,var(--lav),var(--teal-soft));border-radius:24px;padding:40px 28px}
+.cta ul{padding-left:1.2em;margin:0 0 1.2em}.cta li{margin-bottom:.5em}
+.help{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-top:18px}
+.refs p{padding-left:2em;text-indent:-2em;font-size:.98rem}
+footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem;text-align:center}
+.tbtn{background:none;border:1px solid var(--line);color:var(--ink);border-radius:99px;padding:6px 12px;font:inherit;font-size:.85rem;cursor:pointer}
+button.btn{border:0;font:inherit;font-weight:700;cursor:pointer}button.btn.alt{border:2px solid var(--teal)}
+@media (max-width:760px){body{font-size:17px}.hero .wrap,.two,.part,.cards{grid-template-columns:1fr}.part:nth-child(even) .pic{order:0}.pic.tall{aspect-ratio:4/3}section{padding:44px 0}nav a{padding:7px 10px;font-size:.9rem}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a class="brand" href="#home">MindMatters</a>
+<nav aria-label="Main">
+<a href="#home">Home</a><a href="#about">About</a><a href="#article">Articles</a><a href="#refs">References</a><a class="go" href="#action">Take Action</a>
+<button class="tbtn" id="theme" type="button" aria-label="Switch light or dark mode">Dark mode</button>
+</nav></div></header>
+
+<main>
+<section class="hero" id="home"><div class="wrap">
+<div>
+<h1>Mind Matters</h1>
+<p class="slogan">Your mind needs care too. Let’s talk about it.</p>
+<p>An advocacy blog made by Jared Victor Basilio. Here you’ll find what mental health is, why it matters for young people, and small steps we can all take to look after ourselves and each other.</p>
+<div class="btns"><a class="btn" href="#about">Learn the basics</a><a class="btn alt" href="#action">Take action</a></div>
+</div>
+<figure class="pic tall"><img src="images/cover.jpg" alt="Cover image for the Mind Matters blog" onerror="this.parentNode.classList.add('missing')"><span class="ph"><b>images/cover.jpg</b>Put your JPG here with this exact name</span></figure>
+</div></section>
+
+<section id="about"><div class="wrap">
+<h2>About the advocacy</h2>
+<div class="two">
+<div>
+<p>Mental health is about how we think, feel, and cope with daily life. Like physical health, it can be strong on some days and fragile on others, and it deserves attention before a crisis happens.</p>
+<p>Our advocacy aims to replace silence and shame with understanding. When people feel safe to speak up, they find help sooner.</p>
+</div>
+<figure class="pic"><img src="images/about.jpg" alt="Illustration about mental health awareness" onerror="this.parentNode.classList.add('missing')"><span class="ph"><b>images/about.jpg</b>Put your JPG here with this exact name</span></figure>
+</div>
+<div class="cards">
+<div class="card a"><h3>What is the issue?</h3><p>Many people struggle with stress, anxiety, or low mood but stay quiet because of stigma, fear of judgment, or not knowing where to go.</p></div>
+<div class="card b"><h3>Why does it matter?</h3><p>Untreated struggles can affect sleep, studies, relationships, and physical health. Early support makes recovery easier.</p></div>
+<div class="card c"><h3>Who is affected?</h3><p>Everyone. Students, parents, teachers, workers, and elders can all be affected, directly or through someone they love.</p></div>
+</div>
+</div></section>
+
+<section class="band" id="article"><div class="wrap">
+<h2>Breaking the silence: mental health and students</h2>
+<p>By Jared Victor Basilio, from 11-Gates</p>
+<div class="article">
+
+<div class="part"><div>
+<h3>The problem is bigger than we think</h3>
+<p>The World Health Organization (2022) reports that about one in eight people worldwide lives with a mental disorder. Anxiety and depression are among the most common. These numbers remind us that mental health struggles are not rare or unusual. They are part of ordinary human life.</p>
+<p>Students face their own pressures: exams, expectations from family, social media comparison, and uncertainty about the future.</p>
+</div>
+<figure class="pic"><img src="images/part1.jpg" alt="Visual about mental health and students" onerror="this.parentNode.classList.add('missing')"><span class="ph"><b>images/part1.jpg</b>Put your JPG here with this exact name</span></figure></div>
+
+<div class="part"><div>
+<h3>Why many people stay silent</h3>
+<p>Stigma is the belief that having a mental health problem is a weakness. It makes people hide what they feel and delay asking for help. Words like “drama” or “just be strong” may seem harmless, yet they can close the door on someone who is hurting.</p>
+<p>Warning signs can include constant sadness, withdrawing from friends, big changes in sleep or appetite, and losing interest in things once enjoyed.</p>
+</div>
+<figure class="pic"><img src="images/part2.jpg" alt="Visual about stigma and staying silent" onerror="this.parentNode.classList.add('missing')"><span class="ph"><b>images/part2.jpg</b>Put your JPG here with this exact name</span></figure></div>
+
+<blockquote>“There is no health without mental health.”<br><small>A widely shared message of mental health advocates</small></blockquote>
+
+<div class="part"><div>
+<h3>The effects on daily life</h3>
+<p>When stress and sadness are ignored, they can lower focus in class, strain friendships, and affect energy and physical health. Over time, the effects can reach the whole family and community.</p>
+<p>The good news is that support works. Talking to someone, building healthy routines, and getting professional care can make a real difference.</p>
+</div>
+<figure class="pic"><img src="images/part3.jpg" alt="Visual about the effects on daily life" onerror="this.parentNode.classList.add('missing')"><span class="ph"><b>images/part3.jpg</b>Put your JPG here with this exact name</span></figure></div>
+
+<div class="part"><div>
+<h3>What the Philippines is doing</h3>
+<p>The Philippine Mental Health Act (Republic Act No. 11036) was signed in 2018. It aims to make mental health services more available and to protect the rights of people with mental health conditions. Laws help, but change also needs people who listen and care.</p>
+</div>
+<figure class="pic"><img src="images/part4.jpg" alt="Visual about mental health in the Philippines" onerror="this.parentNode.classList.add('missing')"><span class="ph"><b>images/part4.jpg</b>Put your JPG here with this exact name</span></figure></div>
+
+</div></div></section>
+
+
+
+<section class="band" id="action"><div class="wrap">
+<div class="cta">
+<h2>Call to action: be someone’s safe space</h2>
+<p>You do not need to be an expert to help. Small actions add up.</p>
+<ul>
+<li><b>Check in</b> with a friend who seems quiet. Ask, “How are you, really?”</li>
+<li><b>Listen</b> without judging or rushing to fix things.</li>
+<li><b>Choose kind words</b> and stop jokes that mock mental illness.</li>
+<li><b>Care for yourself</b> with sleep, movement, breaks, and time with people you trust.</li>
+<li><b>Share this blog</b> with one person today.</li>
+</ul>
+<div class="btns"><a class="btn" href="#refs">See where facts come from</a></div>
+<div class="help">
+<h3>Need help now?</h3>
+<p>Talk to a trusted adult, school guidance counselor, or health professional. In the Philippines, the National Center for Mental Health crisis hotline 
+NCMH Crisis Hotline (24/7 Support)
+
+* Toll-Free Landline (Luzon-wide): 1553 or 1800-1888-1553
+* Globe / TM: 0917-899-8727 (USAP) or 0966-351-4518
+* Smart / TNT: 0919-057-1553
+ In an emergency, call 911.</p>
+</div>
+</div>
+</div></section>
+
+<section id="refs"><div class="wrap refs">
+<h2>References</h2>
+<p>National Center for Mental Health. (n.d.). <i>NCMH crisis hotline</i>. Retrieved from https://ncmh.gov.ph</p>
+<p>Republic Act No. 11036. (2018). <i>An act establishing a national mental health policy</i>. Retrieved from https://www.officialgazette.gov.ph/2018/06/20/republic-act-no-11036/</p>
+<p>World Health Organization. (2022). <i>Mental disorders</i> [Fact sheet]. Retrieved from https://www.who.int/news-room/fact-sheets/detail/mental-disorders</p>
+</div></section>
+</main>
+<footer><div class="wrap">Mind Matters · Final Performance Task · Made by Jared Victor Basilio, 11-Gates</div></footer>
+
+<script>
+var t=document.getElementById('theme'),r=document.documentElement;
+t.addEventListener('click',function(){
+  var d=r.getAttribute('data-theme')==='dark'||(r.getAttribute('data-theme')!=='light'&&matchMedia('(prefers-color-scheme:dark)').matches);
+  r.setAttribute('data-theme',d?'light':'dark'); t.textContent=d?'Dark mode':'Light mode';
+});
+</script>
+</body>
+</html>
